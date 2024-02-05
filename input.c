@@ -26,15 +26,15 @@ char *scan()
             allocated += allocated;
             text = realloc(text, allocated);
         }
-        strcopy(buff, text, b, (int*) &length);
-        if (buff[b - 1] == '\n')
-        {
+        if (buff[b - 1] == '\n') {
+            strcopy(buff, text, b - 1, (int*) &length); // Does not copy the new line character
             break;
         }
+        strcopy(buff, text, b, (int*) &length);
     }
     free(buff);
     text = realloc(text, length);
-    text[length - 1] = '\0';
+    text[length] = '\0';
     return text;
 }
 
