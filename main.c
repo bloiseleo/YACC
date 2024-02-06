@@ -1,7 +1,26 @@
-#include <stdio.h>
 #include "input.h"
+#include "messages.h"
 
-int main() {
-    char* t = input("Type something\n");
-    printf("%s", t);
+void welcome()
+{
+    prefixPrint("Welcome to Yet another C Calculator");
+    prefixPrint("By: B");
+}
+
+int displayOptions()
+{
+    char operations[4] = {
+        '+',
+        '-',
+        '*',
+        '/'};
+    println("Which operation should we do?");
+    int length = sizeof(operations) / sizeof(operations[0]);
+    return list(operations, length);
+}
+
+int main()
+{
+    welcome();
+    int selected = displayOptions();
 }
