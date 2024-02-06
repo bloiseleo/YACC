@@ -8,6 +8,8 @@ The basic C calculator that all kind of programmers have already done in college
  
 - Realloc Tricks: When we perform *memory reallocation* with **realloc**, the pointer may change. Therefore, we need to reassign it to the the pointer reallocated.
 
+- STDOUT is line buffered by default.
+
 ## Roadmap
 
 - [x] Accepts user input from terminal.

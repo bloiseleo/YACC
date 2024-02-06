@@ -41,5 +41,6 @@ char *scan()
 char *input(char *message)
 {
     printf("%s", message);
+    fflush(stdout);
     return scan();
 }
