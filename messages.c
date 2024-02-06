@@ -33,3 +33,10 @@ int list(char* options, int length) {
     free(str);
     return selected;
 }
+
+int operand(char* message) {
+    int v = 0;
+    char* i = input(message);
+    v = atoi(i);
+    return v;
+}

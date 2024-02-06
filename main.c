@@ -22,5 +22,7 @@ int displayOptions()
 int main()
 {
     welcome();
-    int selected = displayOptions();
+    int operator = displayOptions();
+    int operand1 = operand("Type an operand:\n");
+    
 }

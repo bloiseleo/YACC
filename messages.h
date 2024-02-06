@@ -14,3 +14,7 @@ void println(char* s);
  * Print a given list with all the options and return the option selected
 */
 int list(char* options, int length);
+/**
+ * Print a given MESSAGE to receive an operand to operate on.
+*/
+int operand();
