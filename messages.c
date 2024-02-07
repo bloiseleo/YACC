@@ -4,8 +4,6 @@
 #include <stdlib.h>
 #define PREFIX "//========"
 
-#define RESULT_TEMPLATE_MESSAGE "The result is %.2f"
-
 void prefixPrint(char* s) {
     printf("%s%s\n", PREFIX, s);
 }
@@ -37,16 +35,25 @@ int list(const char* options, int length) {
     return selected;
 }
 
-int operand(char* message) {
-    int v = 0;
+float operand(char* message) {
+    float v = 0;
     char* i = input(message);
-    v = atoi(i);
+    v = atof(i);
     return v;
 }
 
 void printResult(float r) {
-    char* buff = malloc(sizeof(char) * strlen(RESULT_TEMPLATE_MESSAGE));
-    sprintf(buff, RESULT_TEMPLATE_MESSAGE, r);
+    int ri = (int) r;
+    char* t = "The result is %.2f";
+    if (ri == r) {
+        t = "The result is %d";
+    }
+    char* buff = malloc(sizeof(char) * strlen(t));
+    if (ri == r) {
+        sprintf(buff, t, ri);
+    } else {
+        sprintf(buff, t, r);
+    }
     println(buff);
     free(buff);
 }

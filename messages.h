@@ -17,7 +17,7 @@ int list(const char* options, int length);
 /**
  * Print a given MESSAGE to receive an operand to operate on.
 */
-int operand();
+float operand(char* message);
 /**
  * Print Result from a given template defined RESULT_TEMPLATE_MESSAGE.
  * If the user does not define, the default will be used.

@@ -14,7 +14,7 @@ The basic C calculator that all kind of programmers have already done in college
 
 - [x] Accepts user input from terminal.
 - [x] Create menu of operators to choose.
-- [ ] Parse (integers and floats) Number inputs correctly.
+- [x] Parse (integers and floats) Number inputs correctly.
 - [x] Perform basic Math Operations correctly.
 - [x] Display result in terminal.
 

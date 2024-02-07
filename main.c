@@ -4,7 +4,7 @@
 
 const char operations[4] = { '+', '-', '*', '/' };
 
-int executeOperation(int o1, int o2, int operator) {
+float executeOperation(float o1, float o2, int operator) {
     switch (operations[operator]) {
         case '+':
             return o1 + o2;
@@ -24,6 +24,11 @@ int executeOperation(int o1, int o2, int operator) {
     }
 }
 
+void end() {
+    prefixPrint("Ending operations!");
+    prefixPrint("Bye bye");
+}
+
 void welcome() {
     prefixPrint("Welcome to Yet another C Calculator");
     prefixPrint("By: B");
@@ -38,8 +43,9 @@ int displayOptions() {
 int main() {
     welcome();
     int operator = displayOptions();
-    int operand1 = operand("Type an operand:\n");
-    int operand2 = operand("Type an operand:\n");
-    int r = executeOperation(operand1, operand2, operator);
+    float operand1 = operand("Type an operand:\n");
+    float operand2 = operand("Type an operand:\n");
+    float r = executeOperation(operand1, operand2, operator);
     printResult(r);
+    end();
 }
