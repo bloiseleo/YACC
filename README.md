@@ -13,10 +13,10 @@ The basic C calculator that all kind of programmers have already done in college
 ## Roadmap
 
 - [x] Accepts user input from terminal.
-- [ ] Create menu of operators to choose.
+- [x] Create menu of operators to choose.
 - [ ] Parse (integers and floats) Number inputs correctly.
-- [ ] Perform basic Math Operations correctly.
-- [ ] Display result in terminal.
+- [x] Perform basic Math Operations correctly.
+- [x] Display result in terminal.
 
 ## How to Build this Project?
 
